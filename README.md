@@ -1,93 +1,59 @@
-# 🐾 PawHome AI — Pet Adoption Platform
+# 🐾 PawHome AI — Pet Adoption App
 
-PawHome AI is a modern pet adoption web application designed to help users find their perfect companion. It combines a clean adoption interface with an AI-powered assistant that guides users through pet selection and the adoption process.
+A modern pet adoption web app powered by Cloudflare Workers AI (Llama 3.2).
 
-## 🌟 Features
+## Features
+- Browse 8 adoptable pets — dogs, cats, rabbits, birds
+- Filter by type, age, and traits
+- AI chat assistant to help find your perfect pet
+- Pet detail modal with adoption process guide
+- Dark mode support
 
-- 🐶 Browse available pets for adoption
-- 🔎 Filter pets by:
-  - Pet type
-  - Age group
-  - Traits
-- ❤️ Save favorite pets
-- 🐾 View detailed pet profiles
-- 🤖 AI-powered adoption assistant
-- 💬 Interactive chat support powered by Claude AI
-- 📱 Responsive design for desktop and mobile
-- 🌙 Automatic light/dark mode support
-- ⚡ Smooth and user-friendly interface
+## Setup
 
-## 🖥️ Demo Features
+### 1. Clone the repo
+```
+git clone https://github.com/yourusername/pawHome.git
+cd pawHome/pawHome
+```
 
-Users can:
-- Explore pets like dogs, cats, rabbits, and birds
-- Check pet details including:
-  - Breed
-  - Age
-  - Weight
-  - Personality traits
-  - Preferences
-- Ask AI questions like:
-  - "Which pet is best for my family?"
-  - "Which pet suits apartment living?"
-  - "I am a first-time pet owner"
+### 2. Add your Cloudflare credentials to `server.js`
+```js
+const CF_ACCOUNT_ID = 'your_account_id';
+const CF_API_TOKEN  = 'your_api_token';
+```
 
-## 🛠️ Technologies Used
+### 3. Run the server
+```
+node server.js
+```
 
-- HTML5
-- CSS3
-- JavaScript
-- Claude AI API
-- Responsive Web Design
+### 4. Open in Chrome
+```
+http://localhost:3000
+```
 
-## 📂 Project Structure
+## Tech Stack
+- Vanilla HTML, CSS, JavaScript
+- Node.js (no dependencies!)
+- Cloudflare Workers AI — `@cf/meta/llama-3.2-3b-instruct`
 
+## Getting Cloudflare API Credentials
+1. Go to [cloudflare.com](https://cloudflare.com) → Sign up free
+2. Dashboard → Workers AI → REST API
+3. Create API Token → Workers AI template
+4. Copy Account ID from your dashboard URL
 
-PawHome-AI/
-│
-├── index.html # Main application file
-├── README.md # Project documentation
+## Project Structure
+```
+pawHome/
+├── index.html    # Frontend — UI + AI chat
+├── server.js     # Node.js server — Cloudflare AI proxy
+└── README.md     # This file
+```
 
+## Screenshots
+> Coming soon
 
-## 🚀 How to Run Locally
-
-1. Clone the repository
-
-```bash
-git clone https://github.com/your-username/PawHome-AI.git
-Open the project folder
-cd PawHome-AI
-Run the application
-
-Open:
-
-index.html
-
-in your browser.
-
-🤖 AI Integration
-
-PawHome AI uses Claude AI to provide personalized pet adoption assistance.
-
-The assistant helps users:
-
-Understand pet personalities
-Choose suitable pets
-Learn adoption steps
-Get pet care suggestions
-🎯 Project Objective
-
-The goal of PawHome AI is to make pet adoption easier, faster, and more personalized by combining technology with animal welfare.
-
-🔮 Future Improvements
-User authentication
-Real shelter database integration
-Online adoption application forms
-Pet image upload system
-Location-based pet matching
-AI-based pet recommendation system
-👩‍💻 Author
-
-Mahek Sadia
-
-Software Engineer Intern | Web Developer
+## License
+MIT
